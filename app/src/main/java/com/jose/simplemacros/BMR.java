@@ -6,22 +6,26 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class BMR extends AppCompatActivity {
 
+    private RadioGroup genderGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bmr);
 
+
+
         final EditText years = (EditText) findViewById(R.id.et_years);
         final EditText feet = (EditText) findViewById(R.id.et_feet);
         final EditText inches = (EditText) findViewById(R.id.et_inches);
         final EditText pounds = (EditText) findViewById(R.id.et_pounds);
-        RadioButton rb_male = (RadioButton) findViewById(R.id.rb_male);
-        RadioButton rb_female = (RadioButton) findViewById(R.id.rb_female);
+        final RadioButton rb_male = (RadioButton) findViewById(R.id.rb_male);
+        final RadioButton rb_female = (RadioButton) findViewById(R.id.rb_female);
         Button calc = (Button) findViewById(R.id.btn_calculate);
 
         calc.setOnClickListener(new View.OnClickListener() {
@@ -36,8 +40,20 @@ public class BMR extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"One or more fields are not valid",Toast.LENGTH_LONG).show();
                 }
                 else if(validInput(years,feet,inches,pounds) == 4){
-                    Toast.makeText(getApplicationContext(),"All inputs are valid",Toast.LENGTH_LONG).show();
+                    double bmr_value = 0;
+                    if (rb_male.isChecked()){
+                        bmr_value = (88.4 +  ( 13.4 * (Integer.parseInt(pounds.getText().toString()) *.454))) +
+                                (4.8 * ((((Integer.parseInt(feet.getText().toString()) * 12))+ Integer.parseInt(inches.getText().toString())) * 2.54)) -
+                                (5.68 * Integer.parseInt(years.getText().toString()));
+                    }
+                    else if (rb_female.isChecked()){
+                        bmr_value = (447.6 +  ( 9.25 * (Integer.parseInt(pounds.getText().toString()) *.454))) +
+                                (3.10 * ((((Integer.parseInt(feet.getText().toString()) * 12))+ Integer.parseInt(inches.getText().toString())) * 2.54)) -
+                                (4.33 * Integer.parseInt(years.getText().toString())) ;
+                    }
+                    Toast.makeText(getApplicationContext(),"Your BMR is: " + bmr_value,Toast.LENGTH_LONG).show();
                 }
+
             }
         });
 
@@ -68,5 +84,7 @@ public class BMR extends AppCompatActivity {
     private boolean isEmpty(EditText etText)  {
         return etText.getText().toString().trim().length() == 0;
     }
+
+
 
 }
