@@ -35,9 +35,9 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="General Macros"
+                android:text="General Macronutrients"
                 android:textAlignment="center"
-                android:textSize="30sp" />
+                android:textSize="28sp" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -160,7 +160,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Fat Loss" />
+                    android:text="Lose Weight" />
 
                 <RadioButton
                     android:id="@+id/radioButton2"
@@ -193,6 +193,13 @@
                 android:layout_margin="10dp">
 
                 <RadioButton
+                    android:id="@+id/radioButton9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sedentary" />
+
+                <RadioButton
                     android:id="@+id/radioButton4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -213,12 +220,6 @@
                     android:layout_weight="1"
                     android:text="Very active" />
 
-                <RadioButton
-                    android:id="@+id/radioButton9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Extra active" />
             </RadioGroup>
 
         </LinearLayout>

@@ -23,12 +23,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, Macros.class);
         startActivity(intent);
     }
-/*
+
     public void calc_keto(View view){
-        Intent intent = new Intent(FromActivity.this, ToActivity.class);
+        Intent intent = new Intent(MainActivity.this, Keto.class);
         startActivity(intent);
     }
-    */
+
 
 
 }
