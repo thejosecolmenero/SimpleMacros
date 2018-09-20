@@ -10,7 +10,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="#a7becc"
+        android:background="@drawable/fruit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp">
@@ -18,12 +18,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
             android:orientation="vertical"
-            android:padding="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -33,7 +28,13 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="vertical"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:alpha=".95"
                 android:background="#d5dce0"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -58,21 +59,24 @@
 
                     <ImageView
                         android:id="@+id/imageView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
-                        app:srcCompat="@android:drawable/btn_plus" />
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/scale" />
 
                     <TextView
                         android:id="@+id/textView12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginBottom="8dp"
                         android:layout_marginEnd="16dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_marginStart="16dp"
-                        android:text="Basal Metabolic Rate (BMR) is the number of calories your body requires to functin at rest. In other words, your BMR is approximately how many calories you would burn in a day of inactivity."
+                        android:text="Basal Metabolic Rate (BMR) is the number of calories your body requires to function at rest. In other words, your BMR is approximately how many calories you would burn in a day of inactivity."
                         android:textColor="#FFFFFF" />
 
                     <Button
@@ -83,14 +87,13 @@
                         android:layout_marginBottom="16dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginRight="8dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="8dp"
                         android:layout_rowWeight="1"
-                        android:background="@android:color/holo_orange_light"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="auto"
                         android:focusableInTouchMode="false"
                         android:onClick="calc_bmr"
-                        android:padding="5dp"
                         android:text="Calculate BMR"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp"
@@ -102,8 +105,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="15dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:alpha=".95"
                 android:background="#d5dce0"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -116,7 +120,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:background="#537184"
+                    android:background="#2e6b42"
                     android:gravity="center"
                     android:orientation="vertical"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -128,10 +132,13 @@
 
                     <ImageView
                         android:id="@+id/imageView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
-                        app:srcCompat="@android:drawable/btn_dialog" />
+                        android:layout_width="175dp"
+                        android:layout_height="125dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/fruits_bowl" />
 
                     <TextView
                         android:id="@+id/textView11"
@@ -148,7 +155,7 @@
                         android:id="@+id/textView13"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
+                        android:layout_marginBottom="8dp"
                         android:layout_marginEnd="16dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginRight="16dp"
@@ -165,14 +172,13 @@
                         android:layout_marginBottom="16dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginRight="16dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="8dp"
                         android:layout_rowWeight="1"
-                        android:background="#00eeee"
+                        android:background="@android:color/transparent"
                         android:clickable="true"
                         android:focusable="auto"
                         android:focusableInTouchMode="false"
                         android:onClick="calc_macros"
-                        android:padding="5dp"
                         android:text="Calculate Macros"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp"
