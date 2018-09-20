@@ -170,31 +170,31 @@ public class Macros extends AppCompatActivity {
                         if (rb_lose.isChecked()){
                             //if sedentary is selected
                             if(rb_sedentary.isChecked()){
-                                calories = bmr_value * 1.2;
-                                protein = (calories * .35)/4;
-                                carbs = (calories *.45)/4;
-                                fat = (calories * .2)/9;
+                                calories = (bmr_value * 1.2)-350;
+                                protein = (calories * .4)/4;
+                                carbs = (calories *.36)/4;
+                                fat = (calories * .24)/9;
                             }
                             //if lightly active is selected
                             if(rb_light.isChecked()){
-                                calories = bmr_value * 1.3;
-                                protein = (calories * .34)/4;
-                                carbs = (calories *.45)/4;
-                                fat = (calories * .21)/9;
+                                calories = (bmr_value * 1.3)-350;
+                                protein = (calories * .4)/4;
+                                carbs = (calories *.36)/4;
+                                fat = (calories * .24)/9;
                             }
                             //if moderately is selected
                             if(rb_moderate.isChecked()){
-                                calories = bmr_value * 1.4;
-                                protein = (calories * .33)/4;
-                                carbs = (calories *.45)/4;
-                                fat = (calories * .22)/9;
+                                calories = (bmr_value * 1.4)-350;
+                                protein = (calories * .4)/4;
+                                carbs = (calories *.36)/4;
+                                fat = (calories * .24)/9;
                             }
                             //if very active is selected
                             if(rb_active.isChecked()){
-                                calories = bmr_value * 1.5;
-                                protein = (calories * .32)/4;
-                                carbs = (calories *.45)/4;
-                                fat = (calories * .23)/9;
+                                calories = (bmr_value * 1.5)-350;
+                                protein = (calories * .4)/4;
+                                carbs = (calories *.36)/4;
+                                fat = (calories * .24)/9;
                             }
                         }
 
@@ -231,34 +231,34 @@ public class Macros extends AppCompatActivity {
                         }
 
                         //if build muscle is selected
-                        if (rb_build.isChecked()){
+                        if (rb_build.isChecked()) {
                             //if sedentary is selected
-                            if(rb_sedentary.isChecked()){
-                                calories = bmr_value * 1.2;
-                                protein = (calories * .35)/4;
-                                carbs = (calories *.45)/4;
-                                fat = (calories * .2)/9;
+                            if (rb_sedentary.isChecked()) {
+                                calories = (bmr_value * 1.2) + 350;
+                                protein = (calories * .33) / 4;
+                                carbs = (calories * .44) / 4;
+                                fat = (calories * .23) / 9;
                             }
                             //if lightly active is selected
-                            if(rb_light.isChecked()){
-                                calories = bmr_value * 1.3;
-                                protein = (calories * .34)/4;
-                                carbs = (calories *.45)/4;
-                                fat = (calories * .21)/9;
+                            if (rb_light.isChecked()) {
+                                calories = (bmr_value * 1.3) + 400;
+                                protein = (calories * .33) / 4;
+                                carbs = (calories * .45) / 4;
+                                fat = (calories * .22) / 9;
                             }
                             //if moderately is selected
-                            if(rb_moderate.isChecked()){
-                                calories = bmr_value * 1.4;
-                                protein = (calories * .33)/4;
-                                carbs = (calories *.45)/4;
-                                fat = (calories * .22)/9;
+                            if (rb_moderate.isChecked()) {
+                                calories = (bmr_value * 1.4) + 450;
+                                protein = (calories * .32) / 4;
+                                carbs = (calories * .45) / 4;
+                                fat = (calories * .23) / 9;
                             }
                             //if very active is selected
-                            if(rb_active.isChecked()){
-                                calories = bmr_value * 1.5;
-                                protein = (calories * .32)/4;
-                                carbs = (calories *.45)/4;
-                                fat = (calories * .23)/9;
+                            if (rb_active.isChecked()) {
+                                calories = (bmr_value * 1.5) + 500;
+                                protein = (calories * .31) / 4;
+                                carbs = (calories * .47) / 4;
+                                fat = (calories * .24) / 9;
                             }
                         }
                     }
