@@ -25,7 +25,9 @@
             android:layout_margin="20dp"
             android:background="#edeeef"
             android:orientation="vertical"
-            android:padding="10dp"
+            android:paddingBottom="15dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -76,6 +78,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:checked="true"
                     android:text="Male" />
 
                 <RadioButton
@@ -193,6 +196,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:checked="true"
                     android:text="Lose Weight" />
 
                 <RadioButton
@@ -230,6 +234,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:checked="true"
                     android:text="Sedentary" />
 
                 <RadioButton
@@ -254,6 +259,13 @@
                     android:text="Very active" />
 
             </RadioGroup>
+
+            <Button
+                android:id="@+id/btn_calculate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Calculate" />
 
         </LinearLayout>
 

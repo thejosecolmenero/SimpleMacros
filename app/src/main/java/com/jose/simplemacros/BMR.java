@@ -18,16 +18,16 @@ public class BMR extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bmr);
 
-
-
+        //EditText
         final EditText years = (EditText) findViewById(R.id.et_years);
         final EditText feet = (EditText) findViewById(R.id.et_feet);
         final EditText inches = (EditText) findViewById(R.id.et_inches);
         final EditText pounds = (EditText) findViewById(R.id.et_pounds);
+        //Radio Buttons
         final RadioButton rb_male = (RadioButton) findViewById(R.id.rb_male);
         final RadioButton rb_female = (RadioButton) findViewById(R.id.rb_female);
-        Button calc = (Button) findViewById(R.id.btn_calculate);
 
+        Button calc = (Button) findViewById(R.id.btn_calculate);
         calc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,12 +51,10 @@ public class BMR extends AppCompatActivity {
                                 (3.10 * ((((Integer.parseInt(feet.getText().toString()) * 12))+ Integer.parseInt(inches.getText().toString())) * 2.54)) -
                                 (4.33 * Integer.parseInt(years.getText().toString())) ;
                     }
-                    Toast.makeText(getApplicationContext(),"Your BMR is: " + bmr_value,Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Your BMR is: " + Math.round(bmr_value),Toast.LENGTH_LONG).show();
                 }
-
             }
         });
-
     }
 
     public int validInput(EditText age, EditText feet, EditText inches, EditText pounds)  {
@@ -72,7 +70,7 @@ public class BMR extends AppCompatActivity {
         if (b > 0 && b < 9){
             counter+=1;
         }
-        if(c >0 && c <12){
+        if(c >=0 && c <12){
             counter+=1;
         }
         if(d > 0 && d < 401){
