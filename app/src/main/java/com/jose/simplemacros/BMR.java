@@ -1,17 +1,23 @@
 package com.jose.simplemacros;
 
+import android.app.Dialog;
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class BMR extends AppCompatActivity {
 
-    private RadioGroup genderGroup;
+
+    final Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +57,33 @@ public class BMR extends AppCompatActivity {
                                 (3.10 * ((((Integer.parseInt(feet.getText().toString()) * 12))+ Integer.parseInt(inches.getText().toString())) * 2.54)) -
                                 (4.33 * Integer.parseInt(years.getText().toString())) ;
                     }
-                    Toast.makeText(getApplicationContext(),"Your BMR is: " + Math.round(bmr_value),Toast.LENGTH_LONG).show();
+
+                    // custom dialog
+                    final Dialog dialog = new Dialog(context);
+                    dialog.setContentView(R.layout.bmr_dialog);
+                    dialog.setTitle("Title...");
+
+                    // set the custom dialog components - text, image and button
+                    TextView text = (TextView) dialog.findViewById(R.id.tv_results);
+                    text.setText(String.valueOf(Math.round(bmr_value)));
+
+                    Button tryagain = (Button) dialog.findViewById(R.id.btn_tryagain);
+                    Button home = (Button) dialog.findViewById(R.id.btn_home);
+                    // if button is clicked, close the custom dialog
+                    tryagain.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            dialog.dismiss();
+                        }
+                    });
+                    home.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(BMR.this, MainActivity.class);
+                            startActivity(intent);
+                        }
+                    });
+                    dialog.show();
                 }
             }
         });

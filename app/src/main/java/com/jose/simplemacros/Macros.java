@@ -1,5 +1,8 @@
 package com.jose.simplemacros;
 
+import android.app.Dialog;
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,11 +10,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Macros extends AppCompatActivity {
 
-    private RadioGroup genderGroup;
+    final Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -262,7 +266,38 @@ public class Macros extends AppCompatActivity {
                             }
                         }
                     }
-                    Toast.makeText(getApplicationContext(),"Protein: " + Math.round(protein) + " Carbs: " + Math.round(carbs) + " Fat: " + Math.round(fat),Toast.LENGTH_LONG).show();
+
+                    // custom dialog
+                    final Dialog dialog = new Dialog(context);
+                    dialog.setContentView(R.layout.macros_dialog);
+                    dialog.setTitle("Title...");
+
+                    // set the custom dialog components - text, image and button
+                    TextView p = (TextView) dialog.findViewById(R.id.tv_protein);
+                    TextView c = (TextView) dialog.findViewById(R.id.tv_carbs);
+                    TextView f = (TextView) dialog.findViewById(R.id.tv_fat);
+                    p.setText(String.valueOf(Math.round(protein)) + " grams");
+                    c.setText(String.valueOf(Math.round(carbs)) + " grams");
+                    f.setText(String.valueOf(Math.round(fat)) + " grams");
+
+                    Button tryagain = (Button) dialog.findViewById(R.id.btn_tryagain);
+                    Button home = (Button) dialog.findViewById(R.id.btn_home);
+                    // if button is clicked, close the custom dialog
+                    tryagain.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            dialog.dismiss();
+                        }
+                    });
+                    home.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(Macros.this, MainActivity.class);
+                            startActivity(intent);
+                        }
+                    });
+
+                    dialog.show();
                 }
             }
         });

@@ -18,7 +18,7 @@
         </activity>
         <activity android:name=".BMR" />
         <activity android:name=".Keto" />
-        <activity android:name=".Macros"></activity>
+        <activity android:name=".Macros" />
     </application>
 
 </manifest>
