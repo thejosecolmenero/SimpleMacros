@@ -55,7 +55,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#edeeef"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
 
                     <TextView
                         android:id="@+id/textView4"
@@ -200,6 +202,7 @@
                             android:id="@+id/rb_lose"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
                             android:layout_weight="1"
                             android:buttonTint="@color/greeny"
                             android:checked="true"
@@ -210,6 +213,7 @@
                             android:id="@+id/rb_maintain"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
                             android:layout_weight="1"
                             android:buttonTint="@color/greeny"
                             android:text="Maintenance"
@@ -219,9 +223,10 @@
                             android:id="@+id/rb_build"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
                             android:layout_weight="1"
                             android:buttonTint="@color/greeny"
-                            android:text="Build Muscle"
+                            android:text="Build Muscle "
                             android:textColor="#2e6b42" />
                     </RadioGroup>
 
@@ -244,6 +249,7 @@
                             android:id="@+id/rb_sedentary"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
                             android:layout_weight="1"
                             android:buttonTint="@color/greeny"
                             android:checked="true"
@@ -254,6 +260,7 @@
                             android:id="@+id/rb_light"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
                             android:layout_weight="1"
                             android:buttonTint="@color/greeny"
                             android:text="Lightly active "
@@ -263,6 +270,7 @@
                             android:id="@+id/rb_moderate"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
                             android:layout_weight="1"
                             android:buttonTint="@color/greeny"
                             android:text="Moderately active"
@@ -272,6 +280,7 @@
                             android:id="@+id/rb_active"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
                             android:layout_weight="1"
                             android:buttonTint="@color/greeny"
                             android:text="Very active"

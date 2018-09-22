@@ -99,7 +99,6 @@ public class Macros extends AppCompatActivity {
                                 fat = (calories * .23)/9;
                             }
                         }
-
                         //if maintenance is selected
                         if (rb_maintain.isChecked()){
                             //if sedentary is selected
@@ -131,7 +130,6 @@ public class Macros extends AppCompatActivity {
                                 fat = (calories * .23)/9;
                             }
                         }
-
                         //if build muscle is selected
                         if (rb_build.isChecked()){
                             //if sedentary is selected
@@ -169,7 +167,6 @@ public class Macros extends AppCompatActivity {
                         bmr_value = (447.6 +  ( 9.25 * (Integer.parseInt(pounds.getText().toString()) *.454))) +
                                 (3.10 * ((((Integer.parseInt(feet.getText().toString()) * 12))+ Integer.parseInt(inches.getText().toString())) * 2.54)) -
                                 (4.33 * Integer.parseInt(years.getText().toString())) ;
-
                         //if lose weight is selected
                         if (rb_lose.isChecked()){
                             //if sedentary is selected
@@ -201,7 +198,6 @@ public class Macros extends AppCompatActivity {
                                 fat = (calories * .24)/9;
                             }
                         }
-
                         //if maintenance is selected
                         if (rb_maintain.isChecked()){
                             //if sedentary is selected
@@ -233,7 +229,6 @@ public class Macros extends AppCompatActivity {
                                 fat = (calories * .26)/9;
                             }
                         }
-
                         //if build muscle is selected
                         if (rb_build.isChecked()) {
                             //if sedentary is selected
@@ -266,13 +261,12 @@ public class Macros extends AppCompatActivity {
                             }
                         }
                     }
-
                     // custom dialog
                     final Dialog dialog = new Dialog(context);
                     dialog.setContentView(R.layout.macros_dialog);
                     dialog.setTitle("Title...");
 
-                    // set the custom dialog components - text, image and button
+                    // set the custom dialog components
                     TextView p = (TextView) dialog.findViewById(R.id.tv_protein);
                     TextView c = (TextView) dialog.findViewById(R.id.tv_carbs);
                     TextView f = (TextView) dialog.findViewById(R.id.tv_fat);
@@ -302,7 +296,6 @@ public class Macros extends AppCompatActivity {
             }
         });
     }
-
     public int validInput(EditText age, EditText feet, EditText inches, EditText pounds)  {
         Integer a = Integer.parseInt(age.getText().toString());
         Integer b = Integer.parseInt(feet.getText().toString());
@@ -324,7 +317,6 @@ public class Macros extends AppCompatActivity {
         }
         return counter;
     }
-
     private boolean isEmpty(EditText etText)  {
         return etText.getText().toString().trim().length() == 0;
     }

@@ -16,7 +16,6 @@ import android.widget.Toast;
 
 public class BMR extends AppCompatActivity {
 
-
     final Context context = this;
 
     @Override
@@ -63,12 +62,13 @@ public class BMR extends AppCompatActivity {
                     dialog.setContentView(R.layout.bmr_dialog);
                     dialog.setTitle("Title...");
 
-                    // set the custom dialog components - text, image and button
+                    // set the custom dialog components
                     TextView text = (TextView) dialog.findViewById(R.id.tv_results);
                     text.setText(String.valueOf(Math.round(bmr_value)));
 
                     Button tryagain = (Button) dialog.findViewById(R.id.btn_tryagain);
                     Button home = (Button) dialog.findViewById(R.id.btn_home);
+
                     // if button is clicked, close the custom dialog
                     tryagain.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -114,7 +114,4 @@ public class BMR extends AppCompatActivity {
     private boolean isEmpty(EditText etText)  {
         return etText.getText().toString().trim().length() == 0;
     }
-
-
-
 }

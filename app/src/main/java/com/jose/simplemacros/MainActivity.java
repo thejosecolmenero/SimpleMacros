@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    //For later - if add on necessary
     /*
     public void calc_keto(View view){
         Intent intent = new Intent(MainActivity.this, Keto.class);
